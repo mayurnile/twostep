@@ -2,6 +2,7 @@ import 'package:flutter/material.dart';
 
 import './screens/splash_screen.dart';
 import './screens/home_screen.dart';
+import './screens/shoe_details_screen.dart';
 
 import './constants/routes.dart';
 void main() => runApp(TwoStep());
@@ -91,6 +92,7 @@ class TwoStep extends StatelessWidget {
       ),
       routes: {
         Routes.HOME_SCREEN: (ctx) => HomeScreen(),
+        Routes.SHOE_DETAILS_SCREENS:(ctx) => ShoeDetailsScreen(),
       },
       home: MySplashScreen(),
     );
