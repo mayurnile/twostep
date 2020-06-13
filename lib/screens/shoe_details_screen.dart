@@ -75,11 +75,14 @@ class _ShoeDetailsScreenState extends State<ShoeDetailsScreen> {
                   top: screenSize.height * 0.06,
                   left: 0,
                   right: 5,
-                  child: Transform.rotate(
-                    angle: (-15 * (3.14 / 180)),
-                    child: Image.asset(
-                      shoe.imagePath,
-                      fit: BoxFit.contain,
+                  child: Hero(
+                    tag: '${shoe.showModel}+1',
+                    child: Transform.rotate(
+                      angle: (-15 * (3.14 / 180)),
+                      child: Image.asset(
+                        shoe.imagePath,
+                        fit: BoxFit.contain,
+                      ),
                     ),
                   ),
                 ),
