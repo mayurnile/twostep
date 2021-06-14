@@ -55,7 +55,7 @@
 ### Here are the App Screenshots
 - Animations
 <br><br>
-<img src="assets/media/two-step-video.gif" height=512>
+<img src="assets/media/Two-Step-Video.gif" height=512>
 
 - Splash Screen
 <br><br>
