@@ -20,7 +20,7 @@ class _ShoeDetailsScreenState extends State<ShoeDetailsScreen> {
 
   @override
   Widget build(BuildContext context) {
-    final List args = ModalRoute.of(context).settings.arguments;
+    final List args = ModalRoute.of(context)!.settings.arguments as List;
     final Shoe shoe = args[0];
     final Color cardColor = args[1];
 
@@ -63,7 +63,7 @@ class _ShoeDetailsScreenState extends State<ShoeDetailsScreen> {
                     alignment: Alignment.topCenter,
                     child: Text(
                       '${shoe.companyName}',
-                      style: textTheme.headline5.copyWith(
+                      style: textTheme.headline5!.copyWith(
                         color: Colors.white,
                         fontSize: 20.0,
                       ),
@@ -124,7 +124,7 @@ class _ShoeDetailsScreenState extends State<ShoeDetailsScreen> {
                   child: FittedBox(
                     child: Text(
                       '${shoe.showModel}',
-                      style: textTheme.headline3.copyWith(
+                      style: textTheme.headline3!.copyWith(
                         color: Colors.black,
                       ),
                     ),
@@ -135,7 +135,7 @@ class _ShoeDetailsScreenState extends State<ShoeDetailsScreen> {
                   child: FittedBox(
                     child: Text(
                       '${shoe.price}',
-                      style: textTheme.headline3.copyWith(
+                      style: textTheme.headline3!.copyWith(
                         color: Colors.black,
                       ),
                     ),
@@ -164,7 +164,7 @@ class _ShoeDetailsScreenState extends State<ShoeDetailsScreen> {
             ),
             child: Text(
               'MORE DETAILS',
-              style: textTheme.button.copyWith(
+              style: textTheme.button!.copyWith(
                 color: Colors.black,
                 fontSize: 16.0,
                 fontWeight: FontWeight.w700,
@@ -194,7 +194,7 @@ class _ShoeDetailsScreenState extends State<ShoeDetailsScreen> {
                   child: FittedBox(
                     child: Text(
                       'Size',
-                      style: textTheme.headline3.copyWith(
+                      style: textTheme.headline3!.copyWith(
                         color: Colors.black,
                       ),
                     ),
@@ -206,7 +206,7 @@ class _ShoeDetailsScreenState extends State<ShoeDetailsScreen> {
                     child: Text.rich(
                       TextSpan(
                         text: 'UK   ',
-                        style: textTheme.bodyText1.copyWith(
+                        style: textTheme.bodyText1!.copyWith(
                           fontWeight: FontWeight.bold,
                         ),
                         children: [
@@ -249,7 +249,7 @@ class _ShoeDetailsScreenState extends State<ShoeDetailsScreen> {
               child: FittedBox(
                 child: Text(
                   'More like this',
-                  style: textTheme.headline3.copyWith(
+                  style: textTheme.headline3!.copyWith(
                     color: Colors.black,
                   ),
                 ),

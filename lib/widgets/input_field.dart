@@ -5,14 +5,14 @@ class InputField extends StatefulWidget {
   final IconData icon;
   final bool obscureText;
   final bool isSuffix;
-  final Function onSaved;
-  final Function validator;
+  final Function(String?)? onSaved;
+  final String? Function(String?)? validator;
 
   InputField({
-    @required this.label,
-    @required this.icon,
-    @required this.obscureText,
-    @required this.isSuffix,
+    required this.label,
+    required this.icon,
+    required this.obscureText,
+    required this.isSuffix,
     this.onSaved,
     this.validator,
   });
@@ -22,7 +22,7 @@ class InputField extends StatefulWidget {
 }
 
 class _InputFieldState extends State<InputField> {
-  bool obscureText;
+  late bool obscureText;
 
   @override
   void initState() {
@@ -32,7 +32,6 @@ class _InputFieldState extends State<InputField> {
 
   @override
   Widget build(BuildContext context) {
-    // final Size screenSize = MediaQuery.of(context).size;
     final TextTheme textTheme = Theme.of(context).textTheme;
 
     return Padding(
@@ -67,7 +66,7 @@ class _InputFieldState extends State<InputField> {
                 obscureText: obscureText,
                 decoration: InputDecoration(
                   labelText: widget.label,
-                  labelStyle: textTheme.headline4.copyWith(
+                  labelStyle: textTheme.headline4!.copyWith(
                     fontSize: 18.0,
                   ),
                   border: InputBorder.none,

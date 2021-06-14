@@ -4,7 +4,7 @@ class SizeWidget extends StatelessWidget {
   final String size;
   final bool isActive;
 
-  SizeWidget({this.size, this.isActive});
+  SizeWidget({required this.size, required this.isActive});
 
   @override
   Widget build(BuildContext context) {
@@ -27,7 +27,7 @@ class SizeWidget extends StatelessWidget {
         size,
         style: Theme.of(context)
             .textTheme
-            .button
+            .button!
             .copyWith(color: isActive ? Colors.white : Colors.black),
       ),
     );

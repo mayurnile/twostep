@@ -5,7 +5,7 @@ import '../models/shoe.dart';
 class NewArrivals extends StatelessWidget {
   final Shoe shoe;
 
-  NewArrivals({this.shoe});
+  NewArrivals({required this.shoe});
 
   @override
   Widget build(BuildContext context) {
@@ -42,7 +42,7 @@ class NewArrivals extends StatelessWidget {
                 ),
                 child: Text(
                   'NEW',
-                  style: textTheme.headline2.copyWith(
+                  style: textTheme.headline2!.copyWith(
                     color: Colors.white,
                     fontSize: 12.0,
                   ),
@@ -64,14 +64,14 @@ class NewArrivals extends StatelessWidget {
                   '${shoe.showModel}',
                   maxLines: 1,
                   textAlign: TextAlign.start,
-                  style: textTheme.headline3.copyWith(
+                  style: textTheme.headline3!.copyWith(
                     color: Colors.black.withOpacity(0.9),
                     fontSize: 18.0,
                   ),
                 ),
                 Text(
                   '${shoe.price}',
-                  style: textTheme.headline4.copyWith(
+                  style: textTheme.headline4!.copyWith(
                     color: Colors.black.withOpacity(0.75),
                     fontSize: 16.0,
                     letterSpacing: 0.5,

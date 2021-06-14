@@ -14,10 +14,10 @@ class ShoeWidget extends StatelessWidget {
   final Color cardColor;
 
   ShoeWidget({
-    this.index,
-    this.fraction,
-    this.shoe,
-    this.cardColor,
+    required this.index,
+    required this.fraction,
+    required this.shoe,
+    required this.cardColor,
   });
 
   @override
@@ -65,7 +65,7 @@ class ShoeWidget extends StatelessWidget {
                       children: <Widget>[
                         Text(
                           '${shoe.companyName}',
-                          style: textTheme.headline5.copyWith(
+                          style: textTheme.headline5!.copyWith(
                             color: Colors.white,
                             fontSize: 20.0,
                           ),
@@ -85,32 +85,13 @@ class ShoeWidget extends StatelessWidget {
                         ),
                         Text(
                           '${shoe.price}',
-                          style: textTheme.headline4.copyWith(
+                          style: textTheme.headline4!.copyWith(
                             color: Colors.white,
                             letterSpacing: 0.5,
                           ),
                         ),
                       ],
                     ),
-                    // Positioned(
-                    //   bottom: 0,
-                    //   right: 0,
-                    //   left: 10,
-                    //   top: 90,
-                    //   child: Transform.rotate(
-                    //     angle: (-40 * (3.14 / 180)),
-                    //     child: Transform.scale(
-                    //       scale: 1.8,
-                    //       child: Transform.translate(
-                    //         offset: Offset(5, 0),
-                    //         child: Image.asset(
-                    //           shoe.imagePath,
-                    //           fit: BoxFit.contain,
-                    //         ),
-                    //       ),
-                    //     ),
-                    //   ),
-                    // ),
                   ],
                 ),
               ),

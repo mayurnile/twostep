@@ -16,10 +16,10 @@ class HomeScreen extends StatefulWidget {
 
 class _HomeScreenState extends State<HomeScreen> {
   //for managing page index fractions
-  PageViewHolder holder;
+  late PageViewHolder holder;
 
   //controller for list
-  PageController _controller;
+  late PageController _controller;
 
   //view port fraction for page view
   double fraction = 0.55;
@@ -47,9 +47,10 @@ class _HomeScreenState extends State<HomeScreen> {
         //size: Size(200,100),
       );
 
-      _cardColors.add(generator.dominantColor != null
-          ? generator.dominantColor
-          : PaletteColor(Colors.blueAccent, 2));
+      if (generator.dominantColor != null)
+        _cardColors.add(generator.dominantColor!);
+      else
+        _cardColors.add(PaletteColor(Colors.blueAccent, 2));
     }
     setState(() {
       _isLoading = false;

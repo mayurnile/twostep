@@ -13,10 +13,10 @@ class LoginScreen extends StatefulWidget {
 class _LoginScreenState extends State<LoginScreen>
     with SingleTickerProviderStateMixin {
   final GlobalKey<FormState> _formKey = GlobalKey<FormState>();
-  TabController _tabController;
+  late TabController _tabController;
 
-  Size screenSize;
-  TextTheme textTheme;
+  late Size screenSize;
+  late TextTheme textTheme;
 
   @override
   void initState() {
@@ -76,8 +76,8 @@ class _LoginScreenState extends State<LoginScreen>
                 child: TabBar(
                   controller: _tabController,
                   labelStyle: textTheme.subtitle2,
-                  unselectedLabelStyle: textTheme.subtitle2.copyWith(
-                    fontSize: 18.0,
+                  unselectedLabelStyle: textTheme.subtitle2!.copyWith(
+                    fontSize: 16.0,
                   ),
                   labelColor: Colors.white,
                   unselectedLabelColor: Colors.black38,
@@ -87,7 +87,7 @@ class _LoginScreenState extends State<LoginScreen>
                   ),
                   indicatorPadding: const EdgeInsets.symmetric(
                     horizontal: 24.0,
-                    vertical: 12.0,
+                    vertical: 4.0,
                   ),
                   indicatorSize: TabBarIndicatorSize.tab,
                   tabs: <Widget>[
@@ -152,11 +152,18 @@ class _LoginScreenState extends State<LoginScreen>
               //login button
               Padding(
                 padding: const EdgeInsets.symmetric(vertical: 12.0),
-                child: RaisedButton(
+                child: ElevatedButton(
                   onPressed: () {
-                    Navigator.of(context).pushReplacementNamed(Routes.HOME_SCREEN);
+                    Navigator.of(context)
+                        .pushReplacementNamed(Routes.HOME_SCREEN);
                   },
-                  elevation: 12.0,
+                  style: ElevatedButton.styleFrom(
+                    elevation: 12.0,
+                    shape: RoundedRectangleBorder(
+                      borderRadius: BorderRadius.circular(32.0),
+                    ),
+                    padding: const EdgeInsets.symmetric(vertical: 16.0),
+                  ),
                   child: Text(
                     'LOGIN',
                     style: textTheme.button,
@@ -164,43 +171,16 @@ class _LoginScreenState extends State<LoginScreen>
                 ),
               ),
               //forget password button
-              FlatButton(
+              TextButton(
                 onPressed: () {},
                 child: Text(
                   'Forget your password ?',
-                  style: textTheme.subtitle1.copyWith(
+                  style: textTheme.subtitle1!.copyWith(
                     letterSpacing: 0.8,
                     fontSize: 16.0,
                   ),
                 ),
               ),
-              //adopt left over space
-              SizedBox(height: screenSize.height * 0.11),
-              //signup option
-              Align(
-                alignment: Alignment.bottomCenter,
-                child: InkWell(
-                  onTap: () {
-                    _tabController.animateTo(1);
-                  },
-                  child: RichText(
-                    text: TextSpan(
-                      text: 'Don\'t Have An Account? ',
-                      style: textTheme.bodyText1,
-                      children: [
-                        TextSpan(
-                          text: 'Signup!',
-                          style: textTheme.subtitle2.copyWith(
-                            color: Theme.of(context).primaryColor,
-                          ),
-                        ),
-                      ],
-                    ),
-                  ),
-                ),
-              ),
-              //spacing
-              SizedBox(height: 12.0),
             ],
           ),
         ),
@@ -248,41 +228,21 @@ class _LoginScreenState extends State<LoginScreen>
               //login button
               Padding(
                 padding: const EdgeInsets.symmetric(vertical: 12.0),
-                child: RaisedButton(
+                child: ElevatedButton(
                   onPressed: () {},
-                  elevation: 12.0,
+                  style: ElevatedButton.styleFrom(
+                    elevation: 12.0,
+                    shape: RoundedRectangleBorder(
+                      borderRadius: BorderRadius.circular(32.0),
+                    ),
+                    padding: const EdgeInsets.symmetric(vertical: 16.0),
+                  ),
                   child: Text(
                     'SIGNUP',
                     style: textTheme.button,
                   ),
                 ),
               ),
-              //adopt left over space
-              SizedBox(height: screenSize.height * 0.08),
-              //signup option
-              Center(
-                child: InkWell(
-                  onTap: () {
-                    _tabController.animateTo(0);
-                  },
-                  child: RichText(
-                    text: TextSpan(
-                      text: 'Already Have An Account? ',
-                      style: textTheme.bodyText1,
-                      children: [
-                        TextSpan(
-                          text: 'Login!',
-                          style: textTheme.subtitle2.copyWith(
-                            color: Theme.of(context).primaryColor,
-                          ),
-                        ),
-                      ],
-                    ),
-                  ),
-                ),
-              ),
-              //spacing
-              SizedBox(height: 12.0),
             ],
           ),
         ),

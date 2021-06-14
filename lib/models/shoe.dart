@@ -1,5 +1,3 @@
-import 'package:flutter/foundation.dart';
-
 class Shoe {
   final String companyName;
   final String showModel;
@@ -7,10 +5,10 @@ class Shoe {
   final String imagePath;
 
   Shoe({
-    @required this.companyName,
-    @required this.showModel,
-    @required this.price,
-    @required this.imagePath,
+    required this.companyName,
+    required this.showModel,
+    required this.price,
+    required this.imagePath,
   });
 
   static List<Shoe> getShoesList() {
