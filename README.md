@@ -33,7 +33,7 @@
 
 
 # About
-#### It is an example UI Template application for a Shoe selling app, with smooth and intuitive animatios and micro-interactions for eye catching scenes. Also the Splash-Screen is build using Rive.
+#### It's a UI Template for a shoe-selling app, complete with smooth and intuitive animations and micro-interactions for eye-catching sceneries. Rive is also used to create the Splash-Screen.
 
 <div><br><br></div>
 
