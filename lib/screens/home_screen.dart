@@ -188,19 +188,19 @@ class _HomeScreenState extends State<HomeScreen> {
         items: <BottomNavigationBarItem>[
           BottomNavigationBarItem(
             icon: Icon(Icons.home),
-            title: Text('Home'),
+            label: 'Home',
           ),
           BottomNavigationBarItem(
             icon: Icon(Icons.favorite),
-            title: Text('Favourites'),
+            label: 'Favourites',
           ),
           BottomNavigationBarItem(
             icon: Icon(Icons.shopping_basket),
-            title: Text('Cart'),
+            label: 'Cart',
           ),
           BottomNavigationBarItem(
             icon: Icon(Icons.person),
-            title: Text('Me'),
+            label: 'Me',
           ),
         ],
       ),

@@ -53,9 +53,13 @@
 
 # Screenshots
 ### Here are the App Screenshots
-- Animations
+- Auth Screen Animations
 <br><br>
-<img src="assets/media/Two-Step-Video.gif" height=512>
+<img src="assets/media/auth-screen-animation.gif">
+
+- Home Screen Animations
+<br><br>
+<img src="assets/media/home-screen-animation.gif">
 
 - Splash Screen
 <br><br>
